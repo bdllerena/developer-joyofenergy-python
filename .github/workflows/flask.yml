@@ -16,4 +16,3 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_SECRET}}
           heroku_app_name: "tw-python-app"
           heroku_email: "davidshaek@gmail.com"
-          usedocker: true
