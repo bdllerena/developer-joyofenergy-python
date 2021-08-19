@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: akhileshns/heroku-deploy@v3.0.0
         with:
-          heroku_api_key: ${{secrets.HEROKU_SECRETS}}
+          heroku_api_key: ${{secrets.HEROKU_SECRET}}
           heroku_app_name: "tw-python-app"
           heroku_email: "davidshaek@gmail.com"
           usedocker: true
