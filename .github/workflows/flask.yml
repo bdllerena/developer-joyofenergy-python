@@ -17,13 +17,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Python ${{ matrix.python-version }}
-      uses: actions/setup-python@v2
+    - uses: akhileshns/heroku-deploy@v3.12.12
       with:
-        python-version: ${{ matrix.python-version }}
-    - name: Install Dependencies
-      run: |
-        python3.7 -m pip install --requirement requirements.txt
-    - name: Run Tests
-      run: |
-        python3.7 -m unittest
+        heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+        heroku_app_name: "tw-python-app"
+        heroku_email: "davidshaek@gmail.com"
